@@ -29,7 +29,7 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		diceRolled = 2;
+		diceRolled = 5;
 		//your code here
 	}
 	void show()
@@ -45,9 +45,32 @@ class Die //models one single dice cube
 		{
 			fill(0);
 			ellipse(myX + 15, myY + 15, 10, 10);
-			ellipse(myX + 35, myX + 45, 10, 10);
+			ellipse(myX + 35, myY + 35, 10, 10);
 		}
-
+		else if (diceRolled == 3)
+		{
+			fill(0);
+			ellipse(myX + 15, myY + 15, 10, 10);
+			ellipse(myX + 25, myY + 25, 10, 10);
+			ellipse(myX + 35, myX + 45, 10, 10);			
+		}
+		else if (diceRolled == 4)
+		{
+			fill(0);
+			ellipse(myX + 15, myY + 15, 10, 10);
+			ellipse(myX + 35, myY + 15, 10, 10);
+			ellipse(myX + 35, myY + 35, 10, 10);
+			ellipse(myX + 15, myY + 35, 10, 10);			
+		}
+		else if (diceRolled == 5)
+		{
+			fill(0);
+			ellipse(myX + 15, myY + 15, 10, 10);
+			ellipse(myX + 35, myY + 15, 10, 10);
+			ellipse(myX + 35, myY + 35, 10, 10);
+			ellipse(myX + 15, myY + 35, 10, 10);
+			ellipse(myX + 25, myY + 25, 10, 10);						
+		}
 	}
 }
 
