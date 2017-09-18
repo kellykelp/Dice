@@ -10,6 +10,9 @@ void draw()
 	noStroke();
 	rect(620, 20, 150, 300, 10);
 	triangle(670, 320, 720, 320, 690, 345);
+	fill(0);
+	textSize(30);
+	text("WOWWEE \nLOOK AT \nALL THEM \nDICES!", 620, 150);
 
 	for (int y = 20; y <= 380; y+=70)
 	{
