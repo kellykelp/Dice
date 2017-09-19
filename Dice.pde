@@ -6,14 +6,8 @@ void setup()
 void draw()
 {
 	background((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
-	fill(255);
-	noStroke();
-	rect(620, 20, 150, 300, 10);
-	triangle(670, 320, 720, 320, 690, 345);
-	fill(0);
-	textSize(30);
-	text("WOWWEE \nLOOK AT \nALL THEM \nDICES!", 620, 150);
-
+	face();
+	
 	for (int y = 20; y <= 380; y+=70)
 	{
 		for (int x = 10; x <= 560; x += 60)
@@ -99,74 +93,19 @@ class Die //models one single dice cube
 	}
 }
 
-
-
-
-
-
-
-
-
-
-/* Coin Flip code for reference!!!
-void setup()
+void face()
 {
-  size(500, 300);
-  textAlign(CENTER);
-  noLoop();
+	fill(255);
+	noStroke();
+	rect(620, 20, 150, 300, 10);
+	triangle(670, 320, 720, 320, 690, 345);
+	fill(0);
+	textSize(30);
+	text("WOWEE \nLOOK AT \nALL THEM \nDICES!", 625, 150);
+	fill(#ebd39b);
+	ellipse(690, 440, 150, 150);
+	fill(0);
+	ellipse(640, 400, 10, 10);
+	ellipse(720, 400, 10, 10);
+	ellipse(680, 410, 25, 30);
 }
-void draw()
-{
-  //Coin bobby = new Coin(50,150);
-  //bobby.show();
-  int numHeads = 0;
-  for (int x = 50; x < 500; x = x + 60)
-  {
-    Coin bobby = new Coin(x, 150);
-    bobby.show();
-    
-    if (bobby.heads == true)
-    {
-      numHeads++;
-    } 
-  }
-  text("There are " + numHeads + " heads up!", 150, 250);
-}
-class Coin
-{
-  //three member variables
-  boolean heads; 
-  int myX, myY;
-
-  //three member functions
-  Coin(int x, int y) //constructor = job is to initialize member variables
-  {
-    myX = x; //no numbers bc we want it to vary
-    myY = y;
-    flip(); //initalize heads
-  }
-  void flip() //randomly assign a side to coin (use boolean!)
-  {
-    if (Math.random() < 0.5)
-    {
-      heads = true;
-    }
-    else 
-      heads = false;
-  }
-  void show()
-  {
-    fill(255);
-    ellipse(myX, myY, 50, 50);
-    fill(0);
-    if (heads == true) 
-    {
-      text("heads", myX, myY);
-    }
-    else
-    {
-      text("tails", myX, myY); 
-    }
-  }
-} 
-*/
