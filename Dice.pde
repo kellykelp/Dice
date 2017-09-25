@@ -1,3 +1,4 @@
+int count = 0; 
 void setup()
 {
 	noLoop();
@@ -13,14 +14,19 @@ void draw()
 		for (int x = 10; x <= 560; x += 60)
 		{
 			Die test = new Die(x, y);
-			test.show(); 
+			test.show();
+			count = count + test.diceRolled;
+			
 		}
 	}
-	
+	textSize(20);
+	text("You rolled a " +  "\n"  + count + "!!!" , 630, 50);
+
 }
 void mousePressed()
 {
 	redraw();
+	count = 0; 
 }
 class Die //models one single dice cube
 {
